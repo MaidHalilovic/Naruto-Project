@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className='main-Container'>
-      <div>
+    <div className='flex justify-center items-center bg-yellow-300'>
+      <div className='flex justify-center items-center gap-10 h-16 font-serif '>
         <button onClick={() => navigate("/AllCharacters")}>
           AllCharacters
         </button>
