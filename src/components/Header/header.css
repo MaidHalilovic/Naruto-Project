@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Concert+One&family=Lexend:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Passion+One:wght@400;700;900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&family=Sora:wght@100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Urbanist:ital,wght@0,700;1,700&display=swap");
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.pages button {
+  background-color: #faffaf;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Concert One", sans-serif;
+  text-decoration: underline;
+}
+.concert-one-regular {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faffaf;
+  height: 120px;
+}
+.pages img {
+  position: relative;
+  right: 100px;
+  width: 120px;
+  height: 90px;
+}

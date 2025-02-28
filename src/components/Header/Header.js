@@ -1,11 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./header.css";
+import img from "../../images/logo_en.webp";
 
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className='flex justify-center items-center bg-yellow-300'>
-      <div className='flex justify-center items-center gap-10 h-16 font-serif '>
+    <div className='concert-one-regular'>
+      <div className='pages'>
+        <img src={img} alt='img' onClick={() => navigate("/")} />
         <button onClick={() => navigate("/AllCharacters")}>
           AllCharacters
         </button>
