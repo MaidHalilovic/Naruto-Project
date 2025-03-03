@@ -13,6 +13,7 @@
   font-size: 17px;
   font-weight: 500;
   gap: 3px;
+  margin-left: 20px;
 }
 .aboutUs {
   display: flex;

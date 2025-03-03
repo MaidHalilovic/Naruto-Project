@@ -3,16 +3,16 @@ import axios from "axios";
 import "./homePage.css";
 
 const HomePage = () => {
-  const [character, setCharacters] = useState([]);
+  const [character, setCharacter] = useState([]);
 
   const fetchCharacters = async () => {
     try {
       const { data } = await axios.get(
-        `https://narutodb.xyz/api/character?limit=1431`
+        `https://narutodb.xyz/api/character?limit=10`
       );
 
       console.log(data.characters);
-      setCharacters(data.characters);
+      setCharacter(data.characters);
     } catch (error) {
       console.error("Error while fetching characters");
     }
@@ -21,7 +21,17 @@ const HomePage = () => {
   useEffect(() => {
     fetchCharacters();
   }, []);
-  return <div>HomePage</div>;
+  return (
+    // <div>
+    //   {/* <div className='card'>
+    //     {character.map((el, index) => (
+    //       <div className='cards' key={index}>
+    //         <img src={el.images} alt='img' />
+    //       </div>
+    //     ))}
+    //   </div> */}
+    // </div>
+  );
 };
 
 export default HomePage;
