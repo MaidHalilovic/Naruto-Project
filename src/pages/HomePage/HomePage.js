@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import axios from "axios";
 import "./homePage.css";
 
@@ -7,9 +7,7 @@ const HomePage = () => {
 
   const fetchCharacters = async () => {
     try {
-      const { data } = await axios.get(
-        `https://narutodb.xyz/api/character?limit=10`
-      );
+      const { data } = await axios.get(`https://narutodb.xyz/api/character`);
 
       console.log(data.characters);
       setCharacter(data.characters);
@@ -22,15 +20,24 @@ const HomePage = () => {
     fetchCharacters();
   }, []);
   return (
-    // <div>
-    //   {/* <div className='card'>
-    //     {character.map((el, index) => (
-    //       <div className='cards' key={index}>
-    //         <img src={el.images} alt='img' />
-    //       </div>
-    //     ))}
-    //   </div> */}
-    // </div>
+    <div className='container'>
+      <h1>Characters:</h1>
+      <div className='card'>
+        {character.map((el, index) => (
+          <div className='cards' key={index}>
+            <img
+              src={el.images}
+              alt='img'
+              style={{
+                height: 200,
+                width: 200,
+              }}
+            />
+            <p>{el.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
